@@ -1,0 +1,555 @@
+
+
+
+Personal Development Report Zen Visser
+Made by: Zen Visser,
+School Year: 2021,
+School: Fontys Hogeschool Eindhoven
+
+
+
+
+
+
+
+Table of contents
+Introduction	3
+Learning outcome table	5
+Latest evaluation	5
+My own evaluation	5
+Learning outcome: Development and Deployment of Enterprise Software	6
+Self-assessment	6
+Learning process description	6
+Feedback	9
+First Evaluation	9
+Second Evaluation	9
+Third Evaluation	9
+Learning outcome: Context-Based Research	10
+Self-assessment	10
+Learning process description	10
+Feedback	12
+First Evaluation	12
+Second Evaluation	12
+Third Evaluation	12
+Learning outcome: Preparation for Life-Long Learning	13
+Self-assessment	13
+Learning process description	13
+Feedback	16
+First Evaluation	16
+Second Evaluation	16
+Third Evaluation	16
+Learning outcome: Scalable Architectures	17
+Self-assessment	17
+Learning process description	17
+Feedback	19
+First Evaluation	19
+Second Evaluation	19
+Third Evaluation	20
+Learning outcome: Development and Operations (DevOps)	21
+Self-assessment	21
+Learning process description	21
+Feedback	23
+First Evaluation	23
+Second Evaluation	23
+Third Evaluation	23
+Learning outcome: Cloud Services	24
+Self-assessment	24
+Learning process description	24
+Feedback	26
+First Evaluation	26
+Second Evaluation	26
+Third Evaluation	26
+Learning outcome: Security by Design	27
+Self-assessment	27
+Learning process description	27
+Feedback	28
+First Evaluation	28
+Second Evaluation	28
+Third Evaluation	28
+Learning outcome: Distributed Data	29
+Self-assessment	29
+Learning process description	29
+Feedback	30
+First Evaluation	31
+Second Evaluation	31
+Third Evaluation	31
+Retrospect	32
+Conclusion	33
+Appendixes	34
+Introduction
+This document’s purpose is to show my proficiency in the learning outcomes of this semester. The learning outcomes are as follows: Development and Deployment of Enterprise Software, Context-Based Research, Preparation for Life-Long Learning, Scalable Architectures, Development and Operations (DevOps), Cloud Services, Security by Design, and Distributed Data.
+
+The group project is a platform on which users can view and visualize datasets. These datasets can be grouped into projects to which different users can be added. These users can be Maintainers of the project or people with interest in the project. 
+
+For this semesters’ individual project, I will be making a platform to help users find the best prices for products. Users can add products not yet in our database systems and add sources for where to buy the products. Users will be able to report products and sources. Admins will be able to add new stores for sources and categories for products and will be able to moderate existing products and sources.
+
+Some of the links provided in this document are to other Google docs documents. These should all be accessible to anyone with the link. If any of the Google docs are not accessible, please let me know. 
+Some of the other links are to (pages of) my Gitlab repositories. I prefer to keep my code private; this is why my repositories are private. But of course, I don’t mind giving access to my teachers. So if you need access, please let me know. 
+There are also links to Fontys’ canvas course. All of my teachers should have access to them; if any of the links do not work, please contact me. 
+Lastly, some of the links will be to external websites. I tried my best to make sure that the links are to sources that won’t go away. But I might make a mistake, or some links might not be valid anymore. Please contact me if any of the other links are invalid.
+
+You can reach me on Teams (Zen Dageraad Visser) or email (MrDoekje@gmail.com) or Discord (Zen#4811)
+
+
+Learning outcome table
+Latest evaluation
+Learning outcome
+Development and Deployment of Enterprise Software
+Context-Based Research
+Preparation for Life-Long Learning
+Scalable Architectures
+Development and Operations (DevOps)
+Cloud Services
+Security by Design
+Distributed Data
+Level
+Proficient
+Advanced
+Proficient
+Advanced
+Advanced
+Proficient
+Proficient
+Advanced
+
+My own evaluation
+Learning outcome
+Development and Deployment of Enterprise Software
+Context-Based Research
+Preparation for Life-Long Learning
+Scalable Architectures
+Development and Operations (DevOps)
+Cloud Services
+Security by Design
+Distributed Data
+Level
+Advanced
+Advanced
+Advanced
+Advanced
+Advanced
+Advanced
+Advanced
+Advanced
+
+
+
+Learning outcome: Development and Deployment of Enterprise Software
+Self-assessment
+I’m currently advanced at the development and deployment of enterprise software. I know what the development and deployment of enterprise software is and even have complex examples of my projects relating to the outcome.
+Learning process description
+The first thing I did this semester concerning enterprise software development is the Enterprise Software platform case. Here I determined the best enterprise software platform for a bank trying to keep up with the digital age. I determined what good criteria would be, helped determine what frameworks to compare and helped evaluate a few of the frameworks.
+
+Furthermore, my personal project includes the possibility to add stores with a store name and regex. Users can add sources to products that are linked to stores. When users add a source, they can select a store and then the URL they add for the source will be checked with the store’s regex to make sure every source for a particular store has a link belonging to the store. Only users with the add:store permission can add stores to the database.
+
+Another project I did that proves my proficiency in the development and deployment of enterprise software is my personal portfolio which uses a Digital ocean hosted headless CMS as backend and a Vue frontend.
+
+Another example of working on the development and deployment of enterprise software is my role in designing the group project for our class. I act as representative of Group 2 in our class, which came with the responsibility of working on the project proposal and architecture document.
+
+Something else I did relating to enterprise software is the automatic generating of a typescript SDK (and swagger UI) of my web gateway for the client. The generation of the SDK relates to enterprise software because it’s the automation of a process that makes development more accessible and better.
+
+I did another two cases. The first one is about helping a company find a better way to develop their projects. I helped find architectural styles and helped compare them by a few criteria. The second one is about finding a way to help them determine if the software is of a certain quality, for this case I helped determine the different test frameworks to com
+
+For security and messaging, I did another two cases that relate to enterprise software. The first one was about messaging, for this case I helped determine which systems we would compare and helped compare them. I also helped make a prototype. And the second one was about security by design, for this case I helped determine the security requirements and I researched security and implementation practises.
+
+For the group project we had to work on a feed to serve relevant content to users. To do this I had to do research. The research included thinking about how we could set up the system so it wouldn’t require doing a massive amount of api calls to other services.
+
+For my individual project I needed a service to handle image uploads or deletes. Because this service would only get used by other services, and I had previously decided on using gRPC, I really wanted to make this a gRPC microservice. I ran into the problem that sending files via gRPC can only be done by streaming byte arrays. This came with a bunch of complications like having to use the first few bytes to check if the byte array was actually an image.
+
+Another thing we had to develop for the group project was the dataset service. The challenge was to store data of which we did not know anything and to keep this secure. I helped in the design of the service and data store. We ultimately choose a NoSQL database.
+
+A big advantage of gRPC is that it uses protocol buffers as an interface description language. Because of the use of protocol buffers, it is easier to share the interfaces to every service that supports gRPC communication. I made a repository for the different proto files and had submodules for each service that needed them.
+
+Universalised exception handling is pretty important for an application with a bunch of microservices. Luckily I used Java with Quarkus for each of my microservices so I could easily make a repository to help with exception handling. This made it easier to expand what kind of API responses I sent back and helped with implementing Exception logging.
+
+I’ve wanted to do something with logging for a while now. This is why I did research about ways to log. My research concluded that using Sentry was a good idea. Sentry isn’t quite logging, but helps do something that just regular logging can’t as easily. In my opinion, the information that Senty provides is more important for now then just logs.
+
+Although I didn't think it would actually matter (because no one will probably use my application) I really wanted to implement better search functionality. Just because it was something interesting and supposedly makes full text searches better and general searches quicker. This is why I implemented Elasticsearch for the product search instead of doing normal SQL queries.
+
+After implementing Elasticsearch there was another challenge; caching the sourceinfo needed when getting a list of products. I started with just caching this in a Hashmap. But that came with the problem that when running multiple replicas of the product API I’d need to cache everything multiple times. So I decided to use Redis to cache Source info. I’m very happy that I got to use Redis as I heard very positive things about it and it looked interesting when doing research for message brokers.
+
+To be able to view the data indexed by elasticsearch I had to set up Kibana. Though this wasn’t the hardest thing in the world, figuring out how to view the right data ended up being rather challenging. As this world of the Elastic stack was very new to me.
+
+For my job I worked with Bull which is a library to help develop queues. I used this system to make sure that when there are heavy tasks we suddenly need to do we can do these one at a time. I implemented Bull with Redis so that it would be easier to scale to multiple pods.
+
+For my job I also needed to make a scheduler service. This service doesn’t have a webservice and only runs a cronjob every 15 minutes and does a postgres query to check what tasks it needs to schedule. 
+
+For my job I also help set up Openstack which we will be using to store files for now but in the future also to host VPS’s and other cloud functions we will need. To work with this we also set up a sdk. This isn’t finished yet but when it is we will most likely publish it to npm.
+
+For my job I also set up a caching service to reduce the load for the scheduler. The caching service uses Redis to make it easier to scale the scheduler.
+
+For my job I had to deploy my application to kubernetes. To make it easier to deploy I set up CI/CD that uses helm charts to automatically relevant environmental variables into the kubernetes deployments. This also made it easier to use a new image in the ci/cd.
+
+For my job I also had to deploy Redis and a Postgres database. To make it easier to do this I used a Redis and Postgres operator and set up helm charts and ci/cd in its own repository so we can easily deploy the databases.
+Feedback
+Matthijs: I agree that Zen is advanced for this learning outcome. He has multiple examples of working on enterprise software projects with a variety of different tools. And as a representative of our group he also had a lot to do with the architecture of the group project. He is also really far along if not finished with the individual project for this semester.
+Tim Chermin: I think you’re at least proficient, at some places you don’t explain what you did for cases and to get an advanced from me you need to do that everywhere.
+First Evaluation
+In the first evaluation, I was proficient at the development and deployment of enterprise software. I knew what the development and deployment of enterprise software were about and had some examples of my projects relating to the outcome.
+Second Evaluation
+The second evaluation, I was still proficient at the development and deployment of enterprise software, though this doesn’t mean that I didn’t do a lot of things relating to this proficiency since my last evaluation.
+Third Evaluation
+The third evaluation I was proficient at Development and Deployment of Enterprise Software. 
+
+Learning outcome: Context-Based Research
+Self-assessment
+I am currently advanced at context-based research. I know what context-based research is and have a lot of examples of me doing context-based research.
+Learning process description
+The first example of context-based research is the Enterprise Software platform case. I, along with my group, used context-based research to determine the best Enterprise software platform for a bank. I determined what good criteria would be, helped determine what frameworks to compare and helped evaluate a few of the frameworks.
+
+The following example of context-based research is the Enterprise Architecture & Event storming case. Here we had to recommend our nephew a way to improve their development process so that there would be a shared understanding between the developers and the stakeholders. I helped determine what tools would be good for creating C4 models and found a good way to involve both developers and stakeholders to get a list of requirements.
+
+I did another two cases. The first one is about helping NS find a better way to develop their projects, for this case I helped find architectural styles and helped compare them by a few criteria. The second one is about finding a way to help them determine if the software is of a certain quality, for this case I helped determine the different test frameworks to compare and helped create the criteria to compare them to.
+
+Another example of context-based research is my research and technology choices document. In this document, I determine which technology choices I made for my individual project and do related research. This document, of course, contains more than just one instance of context-based research; at the moment, it includes the following researches:
+Frontend language
+Backend language
+Authentication provider
+API gateway
+Media library
+Communication between microservices
+Logging
+
+For context-based research about security and messaging, I did another two cases. The first one was about messaging, for this case I helped determine which systems we would compare and helped compare them. I also helped make a prototype. The second one was about security by design, for this case I helped determine the security requirements and I researched security and implementation practises.
+
+For the group project we had to work on a feed to serve relevant content to users. To do this I had to do research. The research included thinking about how we could set up the system so it wouldn’t require doing a massive amount of api calls to other services.
+
+For my individual project I needed a service to handle image uploads or deletes. Because this service would only get used by other services, and I had previously decided on using gRPC, I really wanted to make this a gRPC microservice. I ran into the problem that sending files via gRPC can only be done by streaming byte arrays. This came with a bunch of complications like having to use the first few bytes to check if the byte array was actually an image, which I had to find out how to do.
+
+Another thing we had to develop for the group project was the dataset service. The challenge was to store data of which we did not know anything and to keep this secure. I helped in the design of the service and data store. We ultimately choose a NOSQL database.
+
+To be able to view the data indexed by elasticsearch I had to set up Kibana. Though this wasn’t the hardest thing in the world, figuring out how to view the right data ended up being rather challenging. As this world of the Elastic stack was very new to me.
+
+For the group project we set up a docker-compose for all the microservices that had to run and the services they depend on. Because of the scope of the group project that meant that this was a very big docker-compose document.
+
+I did a case study about DevSecOps. I helped research why a company should follow a change request procedure and whether MTTR is important for clients.
+
+Another case study I did was about cloud services. I helped research what cloud computing and serverless cloud computing are and what different scaling principles there are.
+
+Feedback
+Matthijs: I find it hard to judge this learning outcome, but I think Zen is at least proficient since he can almost always find an adequate solution for the different use cases he has faced in his numerous projects.
+Tim Chermin: I think you’re at least proficient. I want you to describe what you learned from the cases instead of just explaining what you did*
+
+* I disagree with Tim Chermin on this point, even if I wouldn’t learn anything from any of the cases, showcasing what I did for them should be valid for this learning objective. Especially because I link the cases, so if you want to see the research you can. Of course I appreciate his feedback nonetheless.
+First Evaluation
+In the first evaluation, I was beginning at context-based research. I knew what context-based research was and had a few examples of me doing context-based research.
+Second Evaluation
+The second evaluation, I was still beginning at context based research, though this doesn’t mean that I didn’t do a lot of things relating to this proficiency since last evaluation. I personally also don’t agree with the evaluation as I believe I already was proficient.
+Third Evaluation
+The third evaluation I was advanced for context based research.
+Learning outcome: Preparation for Life-Long Learning
+Self-assessment
+I am currently advanced at preparation for lifelong learning. I know what the outcome is about and have complex examples of choices and thoughts related to the preparation for lifelong learning.
+Learning process description
+Preparation for lifelong learning is about, among other things, constantly challenging what you know. The first example of me doing this is using gRPC to communicate between microservices in my project, as this was the first time I used this communication protocol. 
+
+Another example is the choice of Auth0 for my authentication provider; this has been the first time for me configuring everything related to Auth0. 
+
+Though it wasn’t my first time, I learned to utilize docker.
+
+Another excellent example of lifelong learning is my portfolio. I use Strapi and Graphql to make it easy to add new projects to my portfolio; this project is also hosted on a digital ocean droplet using NGINX. Something I also had never done before.
+
+I also examined a few minors and decided to do the applied data science minor next semester probably. I enjoyed the semester of data science I did, and there is a slight chance that I want to do a major in data science, so this would be a great chance to learn more.
+
+Another case that I did relating to lifelong learning is the automatic generation of a typescript SDK (and swagger UI) of my web gateway for the client.
+
+Another example of lifelong learning is using Kafka in my individual project. Just like with gRPC, is this the first time I used Kafka in a project. Because of this issue, I learned a lot about different ways to communicate between microservices this semester.
+
+For the group project we had to work on a feed to serve relevant content to users. To do this I had to do research. The research included thinking about how we could set up the system so it would not require doing a massive amount of api calls to other services.
+For my individual project I needed a service to handle image uploads or deletes. Because this service would only get used by other services, and I had previously decided on using gRPC, I really wanted to make this a gRPC microservice. I ran into the problem that sending files via gRPC can only be done by streaming byte arrays. This came with a bunch of complications like having to use the first few bytes to check if the byte array was actually an image.
+
+I also used Kubernetes, currently only local, to get a better deployment of my services. Learning Kubernetes was really difficult but fun to get going as there’s so much to learn! All of my services have a deployment and a service, I set up an ingress to route traffic from outside to the cluster with a traefik controller and service, I had to set up mysql in kubernetes with a persistent volume and a persistent volume claim, I had to set up Kafka and Zookeeper, and had to set up gRPC communication between pods. All of these elements came with unique challenges, some of which took me days to solve.
+
+Another thing we had to develop for the group project was the dataset service. The challenge was to store data of which we did not know anything and to keep this secure. I helped in the design of the service and data store. We ultimately choose a NOSQL database.
+
+A big advantage of gRPC is that it uses protocol buffers as an interface description language. Because of the use of protocol buffers, it is easier to share the interfaces to every service that supports gRPC communication. I made a repository for the different proto files and had submodules for each service that needed them.
+
+Universalised exception handling is pretty important for an application with a bunch of microservices. Luckily I used Java with Quarkus for each of my microservices so I could easily make a repository to help with exception handling. This made it easier to expand what kind of API responses I sent back and helped with implementing Exception logging.
+
+I’ve wanted to do something with logging for a while now. This is why I did research about ways to log. My research concluded that using Sentry was a good idea. Sentry isn’t quite logging, but helps do something that just regular logging can’t as easily. In my opinion, the information that Senty provides is more important for now then just logs.
+
+Although I didn't think it would actually matter (because no one will probably use my application) I really wanted to implement better search functionality. Just because it was something interesting and supposedly makes full text searches better and general searches quicker. This is why I implemented Elasticsearch for the product search instead of doing normal SQL queries.
+
+For my product microservice to work it needs Elasticsearch to run. This is pretty acceptable for when running on Docker or Kubernetes but came with a challenge for doing CI. Because when running CI to test the application it needed Elasticsearch to run. This was quite challenging to figure out but the solution ended up being very easy!
+
+After implementing Elasticsearch there was another challenge; caching the sourceinfo needed when getting a list of products. I started with just caching this in a Hashmap. But that came with the problem that when running multiple replicas of the product API I’d need to cache everything multiple times. So I decided to use Redis to cache Source info. I’m very happy that I got to use Redis as I heard very positive things about it and it looked interesting when doing research for message brokers.
+
+To be able to view the data indexed by elasticsearch I had to set up Kibana. Though this wasn’t the hardest thing in the world, figuring out how to view the right data ended up being rather challenging. As this world of the Elastic stack was very new to me.
+
+I did a case study about DevSecOps. I helped research why a company should follow a change request procedure and whether MTTR is important for clients.
+
+Another case study I did was about cloud services. I helped research what cloud computing and serverless cloud computing are and what different scaling principles there are.
+
+For my job I worked with Bull which is a library to help develop queues. I used this system to make sure that when there are heavy tasks we suddenly need to do we can do these one at a time. I implemented Bull with Redis so that it would be easier to scale to multiple pods.
+
+For my job I also needed to make a scheduler service. This service doesn’t have a webservice and only runs a cronjob every 15 minutes and does a postgres query to check what tasks it needs to schedule. 
+
+For my job I also help set up Openstack which we will be using to store files for now but in the future also to host VPS’s and other cloud functions we will need. To work with this we also set up a sdk. This isn’t finished yet but when it is we will most likely publish it to npm.
+
+For my job I also set up a caching service to reduce the load for the scheduler. The caching service uses Redis to make it easier to scale the scheduler.
+
+For my job I had to deploy my application to kubernetes. To make it easier to deploy I set up CI/CD that uses helm charts to automatically relevant environmental variables into the kubernetes deployments. This also made it easier to use a new image in the ci/cd.
+
+For my job I also had to deploy Redis and a Postgres database. To make it easier to do this I used a Redis and Postgres operator and set up helm charts and ci/cd in its own repository so we can easily deploy the databases.
+Feedback
+Matthijs: I agree that Zen is advanced for life-long learning. He always looks for new technologies to help his projects and takes on projects with a variety of use cases. He also helps other students with adapting to new technologies. Furthermore he also put effort in finding the right minor for next semester, build an online portfolio and is currently applying for a job.
+Tim Chermin: I think you’re at least proficient, at some places you don’t explain what you did for cases and to get an advanced from me you need to do that everywhere.
+First Evaluation
+In the first evaluation, I was proficient at preparation for lifelong learning. I knew what the outcome was about and had some examples of choices and thoughts related to the preparation for lifelong learning.
+Second Evaluation
+The second evaluation, I was still proficient at preparation for lifelong learning, though this doesn’t mean that I didn’t do a lot of things relating to this proficiency since last evaluation.
+Third Evaluation
+My third evaluation I was proficient at preparation for lifelong learning.
+Learning outcome: Scalable Architectures
+Self-assessment
+I am currently advanced at scalable architectures. I have a good understanding of scalable architectures and have applied complex principles of scalable architectures in projects.
+Learning process description
+To learn more about scalable architecture, I made my individual projects API into microservices. I also decided to make an API gateway to help the project grow so that the client does not have to keep track of the different addresses for the other microservices, instead only having to know the gateway. 
+
+Another way in which I have been learning about scalable architecture is my use of Docker. Using Docker has helped me run and develop the six applications I currently need to run for my project’s full functionality.
+
+Another example of working on scalable architecture is my role in our class’ group project’s architecture.
+
+Another thing that I did relating to scalable architectures is the automatic generation of a typescript SDK (and swagger UI) of my web gateway for the client. The generation of the SDK is related to scalable architecture because it helps make communication between the client and the gateway strict.
+
+For scalable architecture, I researched security and messaging in another two cases. The first one was about messaging, for this case I helped determine which systems we would compare and helped compare them. I also helped make a prototype. And the second one was about security by design, for this case I helped determine the security requirements and I researched security and implementation practises.
+
+For the group project we had to work on a feed to serve relevant content to users. To do this I had to do research. The research included thinking about how we could set up the system so it wouldn’t require doing a massive amount of api calls to other services.
+
+I also used Kubernetes, currently only local, to get a better deployment of my services. Learning Kubernetes was really difficult but fun to get going as there’s so much to learn! All of my services have a deployment and a service, I set up an ingress to route traffic from outside to the cluster with a traefik controller and service, I had to set up mysql in kubernetes with a persistent volume and a persistent volume claim, I had to set up Kafka and Zookeeper, and had to set up gRPC communication between pods. All of these elements came with unique challenges, some of which took me days to solve.
+
+Another thing we had to develop for the group project was the dataset service. The challenge was to store data of which we did not know anything and to keep this secure. I helped in the design of the service and data store. We ultimately choose a NOSQL database and to make a microservice for every data format that we allow, to make it better scalable.
+
+A big advantage of gRPC is that it uses protocol buffers as an interface description language. Because of the use of protocol buffers, it is easier to share the interfaces to every service that supports gRPC communication. I made a repository for the different proto files and had submodules for each service that needed them.
+
+Universalised exception handling is pretty important for an application with a bunch of microservices. Luckily I used Java with Quarkus for each of my microservices so I could easily make a repository to help with exception handling. This made it easier to expand what kind of API responses I sent back and helped with implementing Exception logging.
+
+Although I didn't think it would actually matter (because no one will probably use my application) I really wanted to implement better search functionality. Just because it was something interesting and supposedly makes full text searches better and general searches quicker. This is why I implemented Elasticsearch for the product search instead of doing normal SQL queries.
+
+After implementing Elasticsearch there was another challenge; caching the sourceinfo needed when getting a list of products. I started with just caching this in a Hashmap. But that came with the problem that when running multiple replicas of the product API I’d need to cache everything multiple times. So I decided to use Redis to cache Source info. I’m very happy that I got to use Redis as I heard very positive things about it and it looked interesting when doing research for message brokers.
+
+To be able to view the data indexed by elasticsearch I had to set up Kibana. Though this wasn’t the hardest thing in the world, figuring out how to view the right data ended up being rather challenging. As this world of the Elastic stack was very new to me.
+
+For the group project we set up a docker-compose for all the microservices that had to run and the services they depend on. Because of the scope of the group project that meant that this was a very big docker-compose document.
+
+For my job I worked with Bull which is a library to help develop queues. I used this system to make sure that when there are heavy tasks we suddenly need to do we can do these one at a time. I implemented Bull with Redis so that it would be easier to scale to multiple pods.
+
+For my job I also needed to make a scheduler service. This service doesn’t have a webservice and only runs a cronjob every 15 minutes and does a postgres query to check what tasks it needs to schedule.
+
+For my job I also set up a caching service to reduce the load for the scheduler. The caching service uses Redis to make it easier to scale the scheduler.
+
+For my job I had to deploy my application to kubernetes. To make it easier to deploy I set up CI/CD that uses helm charts to automatically relevant environmental variables into the kubernetes deployments. This also made it easier to use a new image in the ci/cd.
+
+For my job I also had to deploy Redis and a Postgres database. To make it easier to do this I used a Redis and Postgres operator and set up helm charts and ci/cd in its own repository so we can easily deploy the databases.
+Feedback
+Matthijs: I think Zen is at least proficient for scalable architectures, because he set up Kubernetes for the individual project, including elastic search and gRPC communication between pods. He probably should be advanced, because he also helped in the setup for the group project.
+Tim Chermin: I think you’re at least proficient, at some places you don’t explain what you did for cases and to get an advanced from me you need to do that everywhere.
+First Evaluation
+In the first evaluation, I was proficient at scalable architectures. I had a good understanding of scalable architectures and had applied some principles of scalable architectures in projects.
+Second Evaluation
+The second evaluation, I was still proficient at scalable architectures, though this doesn’t mean that I didn’t do a lot of things relating to this proficiency since last evaluation.
+Third Evaluation
+The third evaluation I was advanced for scalable architectures.
+Learning outcome: Development and Operations (DevOps)
+Self-assessment
+I’m currently advanced at development and operations. I know what DevOps is and have complex examples of doing things relating to DevOps in projects.
+Learning process description
+Another project I did that proves my proficiency in this learning outcome is my personal portfolio. The portfolio also uses a Digital ocean hosted headless CMS as a backend.
+
+Another example of development and operations is the CI/CD of my frontend project. I used the Gitlab CI and firebase hosting to have both a development build deployment and release build deployment.
+
+Another example of DevOps this semester is my use of Docker. It dramatically helps develop the current eight applications I need to run to have a fully functional platform.
+
+I was the representative of Group 2. Meaning that I had to help organise the class to prepare for maybe the most prominent team I’ve ever had to work in. Because I was a representative I also had to think about how we would be organising our DevOps.
+
+Another example of DevOps is the CI/CD of my API projects. I currently have CI/CD for 4 of my backend projects. In the CI/CD, the projects get tested, and if the tests succeed, the project gets packaged, and an image of the API gets put on the GitLab registry.
+
+Apart from what I did relating to Development and Operations is the automatic generation of a typescript SDK (and swagger UI) of my web gateway for the client.
+
+Another example of scalable architecture is using Kafka in my individual project. Just like with gRPC, is this the first time I used Kafka in a project. Because of this matter, it will be easier to integrate a lot of microservices.
+
+For DevOps, I researched security in this case, for this case I helped determine the security requirements and I researched security and implementation practises.
+
+I also used Kubernetes, currently only local, to get a better deployment of my services. Learning Kubernetes was really difficult but fun to get going as there’s so much to learn! All of my services have a deployment and a service, I set up an ingress to route traffic from outside to the cluster with a traefik controller and service, I had to set up mysql in kubernetes with a persistent volume and a persistent volume claim, I had to set up Kafka and Zookeeper, and had to set up gRPC communication between pods. All of these elements came with unique challenges, some of which took me days to solve.
+
+A big advantage of gRPC is that it uses protocol buffers as an interface description language. Because of the use of protocol buffers, it is easier to share the interfaces to every service that supports gRPC communication. I made a repository for the different proto files and had submodules for each service that needed them.
+
+Universalised exception handling is pretty important for an application with a bunch of microservices. Luckily I used Java with Quarkus for each of my microservices so I could easily make a repository to help with exception handling. This made it easier to expand what kind of API responses I sent back and helped with implementing Exception logging.
+
+I’ve wanted to do something with logging for a while now. This is why I did research about ways to log. My research concluded that using Sentry was a good idea. Sentry isn’t quite logging, but helps do something that just regular logging can’t as easily. In my opinion, the information that Senty provides is more important for now then just logs.
+
+For my product microservice to work it needs Elasticsearch to run. This is pretty acceptable for when running on Docker or Kubernetes but came with a challenge for doing CI. Because when running CI to test the application it needed Elasticsearch to run. This was quite challenging to figure out but the solution ended up being very easy!
+
+To be able to view the data indexed by elasticsearch I had to set up Kibana. Though this wasn’t the hardest thing in the world, figuring out how to view the right data ended up being rather challenging. As this world of the Elastic stack was very new to me.
+
+For the group project we set up a docker-compose for all the microservices that had to run and the services they depend on. Because of the scope of the group project that meant that this was a very big docker-compose document.
+
+I did a case study about DevSecOps. I helped research why a company should follow a change request procedure and whether MTTR is important for clients.
+
+For my job I also help set up Openstack which we will be using to store files for now but in the future also to host VPS’s and other cloud functions we will need. To work with this we also set up a sdk. This isn’t finished yet but when it is we will most likely publish it to npm.
+
+For my job I had to deploy my application to kubernetes. To make it easier to deploy I set up CI/CD that uses helm charts to automatically relevant environmental variables into the kubernetes deployments. This also made it easier to use a new image in the ci/cd.
+
+For my job I also had to deploy Redis and a Postgres database. To make it easier to do this I used a Redis and Postgres operator and set up helm charts and ci/cd in its own repository so we can easily deploy the databases.
+Feedback
+Tim Chermin: I think you’re at least proficient, at some places you don’t explain what you did for cases and to get an advanced from me you need to do that everywhere.
+First Evaluation
+In the first evaluation, I was proficient at development and operations. I knew what DevOps was and had examples of doing things relating to DevOps in projects.
+Second Evaluation
+The second evaluation, I was still proficient at development and operations, though this doesn’t mean that I didn’t do a lot of things relating to this proficiency since last evaluation.
+Third Evaluation
+The third evaluation I was advanced for development and operations.
+Learning outcome: Cloud Services
+Self-assessment
+I’m currently advanced at cloud services. I understand what cloud services are and have complex examples of using cloud services for projects.
+Learning process description
+Another project I did that proves my proficiency in the development and deployment of enterprise software is my personal portfolio which uses a Digital ocean droplet hosted headless CMS as a backend. Before using a digital ocean droplet, I also hosted the headless CMS on Heroku. I switched to Digital ocean to prevent the backend from being offline for at least 6 hours every day.
+
+To host my frontend project, I am using firebase hosting.
+
+I also used Kubernetes, currently only local, to get a better deployment of my services. Learning Kubernetes was really difficult but fun to get going as there’s so much to learn! All of my services have a deployment and a service, I set up an ingress to route traffic from outside to the cluster with a traefik controller and service, I had to set up mysql in kubernetes with a persistent volume and a persistent volume claim, I had to set up Kafka and Zookeeper, and had to set up gRPC communication between pods. All of these elements came with unique challenges, some of which took me days to solve.
+
+I’ve wanted to do something with logging for a while now. This is why I did research about ways to log. My research concluded that using Sentry was a good idea. Sentry isn’t quite logging, but helps do something that just regular logging can’t as easily. In my opinion, the information that Senty provides is more important for now then just logs.
+
+For the group project we set up a docker-compose for all the microservices that had to run and the services they depend on. Because of the scope of the group project that meant that this was a very big docker-compose document.
+
+A case study I did was about cloud services. I helped research what cloud computing and serverless cloud computing are and what different scaling principles there are.
+
+More examples of cloud services are my past projects Tripsitter and Festifind. Each of which was Enterprise software and used cloud services to run. Here is what these applications where and how they used cloud:
+Tripsitter was a platform for people to find tripsitters and for others to find trips to sit. I used kubernetes with Rancher to deploy the microservices. Tripsitter had 6 microservices. At the start of the project I wanted to use serverless with AWS to deploy but after experimenting I found that my tier account did not permit automatic deployments so I decided to switch to rancher as that would allow automatic deployment. The frontend of tripsitter was hosted on Firebase and for my authentication service I also used Firebase. To allow for custom user data (descriptions and other stuff) I also had to use a Firestore and had to deploy a function on firebase to automatically put new Firebase users in the Firestore.
+Festifind was a social media platform for festival goers. It was a pretty big project with a bunch of microservices. I used serverless for the deployment of these services to deploy them as AWS Lambda functions. I also used Firebase for the authentication of users and for the deployment of the dashboard website. For the authentication I also needed to configure a Firestore and a Firebase function to get the Firebase users in the Firestore. 
+
+For my job I worked with Bull which is a library to help develop queues. I used this system to make sure that when there are heavy tasks we suddenly need to do we can do these one at a time. I implemented Bull with Redis so that it would be easier to scale to multiple pods.
+
+For my job I also needed to make a scheduler service. This service doesn’t have a webservice and only runs a cronjob every 15 minutes and does a postgres query to check what tasks it needs to schedule. 
+
+For my job I also help set up Openstack which we will be using to store files for now but in the future also to host VPS’s and other cloud functions we will need. To work with this we also set up a sdk. This isn’t finished yet but when it is we will most likely publish it to npm.
+
+For my job I had to deploy my application to kubernetes. To make it easier to deploy I set up CI/CD that uses helm charts to automatically relevant environmental variables into the kubernetes deployments. This also made it easier to use a new image in the ci/cd.
+
+For my job I also had to deploy Redis and a Postgres database. To make it easier to do this I used a Redis and Postgres operator and set up helm charts and ci/cd in its own repository so we can easily deploy the databases.
+
+Feedback
+Tim Chermin: I think you’re at least proficient, at some places you don’t explain what you did for cases and to get an advanced from me you need to do that everywhere.
+First Evaluation
+The first evaluation I was at least beginning at cloud services. I understood what cloud services were and had a few examples of using cloud services in projects.
+Second Evaluation
+The second evaluation, I was still beginning at cloud services, though this doesn’t mean that I didn’t do a lot of things relating to this proficiency since last evaluation. I also disagree with the evaluation as the feedback was that I didn’t apply cloud services to enterprise software but what I describe is cloud services for an enterprise software application.
+Third Evaluation
+The third evaluation I was proficient as cloud services.
+Learning outcome: Security by Design
+Self-assessment
+I’m currently advanced at security by design. I understand what security be design is and have complex examples of applying security by design in projects.
+Learning process description
+A way in which I show this is the design of my individual project. I knew I would be needing admin and regular accounts and designed my API’s to take this into a context where specific endpoints would only be accessible by certain users. Some endpoints were also intended to be accessed without logging in, while others need a logged-in user. The frontend also can protect specific routes so that, for example, only admin or only logged in users can access them.
+
+The group project’s architecture also required thinking about how we would secure our API’s, which I, as a representative, had to help work on.
+
+For security by design, I did this case, for this case I helped determine the security requirements and I researched security and implementation practises.
+
+Another thing we had to develop for the group project was the dataset service. The challenge was to store data of which we did not know anything and to keep this secure. I helped in the design of the service and data store. We ultimately choose a NOSQL database.
+
+Universalised exception handling is pretty important for an application with a bunch of microservices. Luckily I used Java with Quarkus for each of my microservices so I could easily make a repository to help with exception handling. This made it easier to expand what kind of API responses I sent back and helped with implementing Exception logging.
+
+I’ve wanted to do something with logging for a while now. This is why I did research about ways to log. My research concluded that using Sentry was a good idea. Sentry isn’t quite logging, but helps do something that just regular logging can’t as easily. In my opinion, the information that Senty provides is more important for now then just logs.
+
+For my job I also needed to make a scheduler service. This service doesn’t have a webservice, to make it much more secure and only runs a cronjob every 15 minutes and does a postgres query to check what tasks it needs to schedule and adds these to a queue.
+
+For my job I also help set up Openstack which we will be using to store files for now but in the future also to host VPS’s and other cloud functions we will need. To work with this we also set up a sdk. This isn’t finished yet but when it is we will most likely publish it to npm.
+
+For my job I had to deploy my application to kubernetes. To make it easier to deploy I set up CI/CD that uses helm charts to automatically relevant environmental variables into the kubernetes deployments. This also made it easier to use a new image in the ci/cd and made secrets of password and other important values.
+
+For my job I also had to deploy Redis and a Postgres database. To make it easier to do this I used a Redis and Postgres operator and set up helm charts and ci/cd in its own repository so we can easily deploy the databases.
+Feedback
+Matthijs: I agree that Zen is proficient in security by design. He has provided the most important security aspects for his individual project, such as exception logging and secure authentication. Because most of our team is still talking to the backend locally in the group project I don't know how far the security is along for the group project. I also think describing in the PDR what security measures could be taken for the individual project if any if there was more time to work on the project.
+Tim Chermin: I think you’re at least proficient, at some places you don’t explain what you did for cases and to get an advanced from me you need to do that everywhere.
+First Evaluation
+In the first evaluation, I was proficient at security by design. I understood what security by design was and had examples of applying security by design in projects.
+Second Evaluation
+The second evaluation, I was still proficient at security by design, though this doesn’t mean that I didn’t do a lot of things relating to this proficiency since my last evaluation.
+Third Evaluation
+The third evaluation I was still proficient at security by design, although I did a lot for security it wasn’t good enough for advanced yet.
+Learning outcome: Distributed Data
+Self-assessment
+I’m currently advanced at distributed data. I understand what distributed data is and have complex examples in a projects relating to distributed data.
+Learning process description
+For distributed data, I have multiple databases, one for most of my microservices. Having multiple databases makes it easier to scale everything. To make it easier to develop with the current five needed databases, I use docker to create and run these databases locally.
+
+For distributed data, it is necessary to have communication between microservices when a relation gets deleted or updated between data in different databases. To do this, I used Kafka to send the next messages to update relations:
+product-delete to update sources of the product
+product-delete to close the reported item
+source-delete to close the reported item
+store-delete to delete stores of products with the store
+store-update to delete stores of products with the store
+category-delete to delete the category of products with the category
+category-update to update the category of products with the category
+
+For the group project we had to work on a feed to serve relevant content to users. To do this I had to do research. The research included thinking about how we could set up the system so it wouldn’t require doing a massive amount of api calls to other services, but rather keep track of useful data in a database ourselves.
+
+Another thing we had to develop for the group project was the dataset service. The challenge was to store data of which we did not know anything and to keep this secure. I helped in the design of the service and data store. We ultimately choose a NOSQL database and to make a microservice for every data format that we allow, to make it better scalable.
+
+I’ve wanted to do something with logging for a while now. This is why I did research about ways to log. My research concluded that using Sentry was a good idea. Sentry isn’t quite logging, but helps do something that just regular logging can’t as easily. In my opinion, the information that Senty provides is more important for now then just logs.
+
+Although I didn't think it would actually matter (because no one will probably use my application) I really wanted to implement better search functionality. Just because it was something interesting and supposedly makes full text searches better and general searches quicker. This is why I implemented Elasticsearch for the product search instead of doing normal SQL queries.
+
+After implementing Elasticsearch there was another challenge; caching the sourceinfo needed when getting a list of products. I started with just caching this in a Hashmap. But that came with the problem that when running multiple replicas of the product API I’d need to cache everything multiple times. So I decided to use Redis to cache Source info. I’m very happy that I got to use Redis as I heard very positive things about it and it looked interesting when doing research for message brokers.
+
+To be able to view the data indexed by elasticsearch I had to set up Kibana. Though this wasn’t the hardest thing in the world, figuring out how to view the right data ended up being rather challenging. As this world of the Elastic stack was very new to me.
+
+For my job I worked with Bull which is a library to help develop queues. I used this system to make sure that when there are heavy tasks we suddenly need to do we can do these one at a time. I implemented Bull with Redis so that it would be easier to scale to multiple pods.
+
+For my job I also help set up Openstack which we will be using to store files for now but in the future also to host VPS’s and other cloud functions we will need. To work with this we also set up a sdk. This isn’t finished yet but when it is we will most likely publish it to npm.
+
+For my job I also set up a caching service to reduce the load for the scheduler. The caching service uses Redis to make it easier to scale the scheduler.
+
+For my job I also had to deploy Redis and a Postgres database. To make it easier to do this I used a Redis and Postgres operator and set up helm charts and ci/cd in its own repository so we can easily deploy the databases.
+Feedback
+Matthijs: I agree that Zen is advanced for this learning outcome. He has separated the data between microservices and has a message broker for parts of the communication. Besides that he also used advanced tooling such as sentry and elastic search to localize data to their respective microservice and orchestrate communication. For the group project he is working on the feed service which holds a lot of data from other services and has made a concrete plan for the communication and data distribution between these services.
+Tim Chermin: I think this is your best learning objective currently and would give you an advanced.
+First Evaluation
+In the first evaluation, I was at least beginning at distributed data; I understood what it was and already had a few examples relating to distributed data projects.
+Second Evaluation
+The second evaluation, I was still proficient at distributed data, though this doesn’t mean that I didn’t do a lot of things relating to this proficiency since my last evaluation.
+Third Evaluation
+My third evaluation I was advanced for distributed data.
+Retrospect
+This semester I learned a lot, probably more than any semester before. This wasn’t my favourite semester as I felt I had to go out of my way more to show the work I had done. In past semesters it was easier for me to just show my work and get good grades. I’m really proud though of how I transitioned into a better way of showcasing my work. Next semester I think I’d start with my current way of showing what I did. Although I prefer the other way, I think it’s much easier to understand. 
+
+Of course technically I’ve got much more experience now with devops and software engineering in general. This semester I would utilize env variables better in a docker compose and I would make a repository for the docker compose that uses submodules to include every other service. 
+
+Although I really liked making my own api-gateway and I was able to use it to make a sdk for my entire api I would use traefik next semester as this is much easier to set up.
+
+For ci/cd I would use helm charts for easier deployment. I learned how to work with them for my job and I’m amazed at how nice it is to work with them.
+
+Conclusion
+A good end product shouldn’t be the reason you succeed a semester, learning a lot should be. But I think this semester I did both. I think I did a great job participating and leading our group project and a great job managing my own project. The best way to show that I learned a lot is showing technologies that I hadn’t used yet, or I did new things with (or other new stuff I did):
+Grpc communication between microservices,
+Nestjs,
+Automatically creating a SDK from the API-gateway,
+Kubernetes,
+Docker compose,
+Kamiko image building in CI,
+Kafka,
+Redis for caching,
+Redis for queue system,
+Openstack,
+Helm,
+Elasticsearch,
+Sentry,
+Kibana,
+Logstash,
+Traefik,
+RBAC,
+Regex (generating regex from url info and generating example from regex),
+Digital ocean,
+Strapi,
+Image streaming over grpc (was very difficult!),
+Creating a feed using an algorithm for group-project,
+Kubernetes operators,
+Translating json to DSV,
+Using NoSQL for JSON data,
+Setting up complex cron jobs,
+Working in a group of 27 students.
+I think that my personal project is my best project this far and I’m super happy with how it turned out. The group project was very difficult to work on because there were just so many of us, which was very unfortunate. But the things I did get to work on were so great to develop.
+
+Appendixes
